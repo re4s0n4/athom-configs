@@ -3,6 +3,8 @@ substitutions:
   project_name: "Athom Technology.RGBCW Bulb"
   project_version: "1.1"
   light_restore_mode: RESTORE_DEFAULT_ON
+  light_rgbww_id: rgbww_light
+  light_rgbww_name: "RGBCW_Bulb"
   color_interlock: 'true'
 
 globals:
@@ -100,8 +102,8 @@ output:
 
 light:
   - platform: rgbww
-    id: rgbww_light
-    name: "RGBCW_Bulb"
+    id: ${light_rgbww_id}
+    name: ${light_rgbww_name}
     restore_mode: ${light_restore_mode}
     red: red_output
     green: green_output
