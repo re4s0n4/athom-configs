@@ -139,7 +139,7 @@ script:
                 id(fast_boot) = 0;
                 fast_boot->loop();
                 global_preferences->sync();
-                auto call = id(rgbww_light).turn_on();
+                auto call = id(${light_rgbww_name}).turn_on();
                 call.set_transition_length(500);
                 call.set_brightness(1.0);
                 call.set_color_mode(ColorMode::RGB);
